@@ -1,0 +1,141 @@
+[
+  {
+    "id": "feed-1",
+    "type": "discussion_thread",
+    "topic": { "id": "nuclear-energy", "name": "Nuclear Energy" },
+    "author": { "id": "dr-jane-doe", "username": "drjanedoe", "displayName": "Dr. Jane Doe", "verified": true },
+    "title": "This new Gen IV safety data is remarkable",
+    "preview": "After reviewing the comprehensive safety analysis, I'm convinced we might finally have a path forward that addresses both waste and meltdown concerns...",
+    "commentCount": 47,
+    "isControversial": true,
+    "createdAt": "2024-03-20T14:32:00Z"
+  },
+  {
+    "id": "feed-2",
+    "type": "new_paper",
+    "source": {
+      "id": "nuclear-climate-2024",
+      "title": "The Role of Nuclear Power in Climate Change Mitigation: A Comprehensive Review",
+      "publisher": { "name": "Nature Energy", "verified": true }
+    },
+    "hookQuestions": [
+      "Is nuclear the answer to climate change?",
+      "What do 47 countries tell us about safety?",
+      "Can we solve the waste problem?"
+    ],
+    "commentCount": 89,
+    "isControversial": false,
+    "readCount": 251
+  },
+  {
+    "id": "feed-3",
+    "type": "network_activity",
+    "count": 15,
+    "users": [
+      { "id": "dr-jane-doe", "username": "drjanedoe" },
+      { "id": "nuclear-engineer", "username": "nuclearengineer" },
+      { "id": "ai-professor", "username": "aiprofessor" }
+    ],
+    "action": "discussed",
+    "target": {
+      "type": "source",
+      "id": "ai-workforce-2024",
+      "title": "Artificial Intelligence and the Future of Work"
+    }
+  },
+  {
+    "id": "feed-4",
+    "type": "topics_for_you",
+    "topics": [
+      { "id": "energy-policy", "name": "Energy Policy", "slug": "energy-policy" },
+      { "id": "quantum-computing", "name": "Quantum Computing", "slug": "quantum-computing" },
+      { "id": "ethics", "name": "Ethics", "slug": "ethics" },
+      { "id": "automation", "name": "Automation", "slug": "automation" }
+    ]
+  },
+  {
+    "id": "feed-5",
+    "type": "spectrum_question",
+    "question": "Is nuclear power worth the risk?",
+    "topic": { "id": "nuclear-energy", "name": "Nuclear Energy", "slug": "nuclear-energy" },
+    "leftLabel": "High Risk",
+    "rightLabel": "Low Risk",
+    "distribution": [0.03, 0.05, 0.08, 0.12, 0.18, 0.22, 0.15, 0.10, 0.05, 0.02],
+    "sourceCount": 156
+  },
+  {
+    "id": "feed-6",
+    "type": "comment_highlight",
+    "author": { "id": "ai-professor", "username": "aiprofessor", "displayName": "Prof. Alan Turing Jr.", "verified": true },
+    "content": "The 14% automation risk figure aligns with our Stanford research, but I think the job creation projections are optimistic. Historical precedent shows transition periods often take decades.",
+    "target": {
+      "type": "source",
+      "id": "ai-workforce-2024",
+      "title": "AI and the Future of Work"
+    },
+    "likes": 89
+  },
+  {
+    "id": "feed-7",
+    "type": "new_paper",
+    "source": {
+      "id": "quantum-crypto-2024",
+      "title": "Quantum Computing and Its Impact on Cryptography",
+      "publisher": { "name": "IEEE Journal", "verified": true }
+    },
+    "hookQuestions": [
+      "Will it break all our encryption?",
+      "Are current passwords becoming obsolete?",
+      "How to make encryption quantum-safe?"
+    ],
+    "commentCount": 32,
+    "isControversial": false,
+    "readCount": 178
+  },
+  {
+    "id": "feed-8",
+    "type": "publisher_update",
+    "publisher": { "id": "nature-energy", "name": "Nature Energy", "verified": true },
+    "paperCount": 3,
+    "message": "released 3 new papers this week"
+  },
+  {
+    "id": "feed-9",
+    "type": "trending_questions",
+    "questions": [
+      { "text": "Will AI create more jobs than it destroys?", "topic": { "slug": "artificial-intelligence" }, "engagement": 1205 },
+      { "text": "Is 2°C warming still achievable?", "topic": { "slug": "climate-science" }, "engagement": 892 },
+      { "text": "Should nuclear be classified as green energy?", "topic": { "slug": "nuclear-energy" }, "engagement": 734 }
+    ]
+  },
+  {
+    "id": "feed-10",
+    "type": "group_activity",
+    "group": { "id": "climate-science-collective", "name": "Climate Science Collective" },
+    "activity": "New thread: 'Revised IPCC projections for 2030'",
+    "memberCount": 5621,
+    "replyCount": 24
+  },
+  {
+    "id": "feed-11",
+    "type": "discussion_thread",
+    "topic": { "id": "artificial-intelligence", "name": "Artificial Intelligence" },
+    "author": { "id": "tech-journalist", "username": "techjournalist", "displayName": "Sarah Chen", "verified": true },
+    "title": "The real threat isn't job loss—it's wage suppression",
+    "preview": "Everyone focuses on automation replacing jobs entirely, but the more insidious effect might be how AI enables employers to pay less for the same work...",
+    "commentCount": 156,
+    "isControversial": true,
+    "createdAt": "2024-03-19T09:15:00Z"
+  },
+  {
+    "id": "feed-12",
+    "type": "weekly_digest",
+    "topic": { "id": "climate-science", "name": "Climate Science", "slug": "climate-science" },
+    "period": "This week",
+    "highlights": [
+      "New IPCC report sparks global debate",
+      "3 new papers on carbon capture technology",
+      "Trending: Is 2°C still achievable?"
+    ]
+  }
+]
