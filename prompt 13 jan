@@ -1,0 +1,104 @@
+I need creating a design strategy/plan/instruction for a frontend developer.
+
+we are building a social media platform and we need to build a demo/poc. its not really meant to be able to provide features needed for the final product and the scope is to get something that looks good, and to show investors, so we need some of the features to work good enough to show the content.
+
+
+the name of the platform is rewall, i will provide you with the pitch deck. I have a vision for what should be included in the poc and i what you to interview, branstorm and discuss to define the scope and outline the design requiremnts etc
+
+
+the idea is:
+
+think of it as a reddit, with minimalist design, and a focus on:
+
+ - get research based answers to questions
+
+ - learn new areas
+
+ - find relevant sources
+
+ - alot of initial focuses around research papers
+
+
+a community, where users can discuss.
+
+rewall has main types of discovery methods, (search and feed) and needs to support these
+
+ - users (individual users with a profile, both for visible but also associated data used by a algorithm)
+
+ - topics (specific areas that can be discussed, its like subreddit, where discussion can take place, etc.)
+
+- sources (like research papers, and here there can be a forum/discussion for this specific source)
+
+- Publisher (a source will always come from a publisher, and a publisher can get verified if they are verified to be unbiased and trustworhy.)
+
+- Groups (users can create a public or private group for anything (like a student project or a niched interesed). the difference from topics will be that the users are more in control and moderate it themselves.
+
+
+there will be a recommendation algorithm to provide content in the feed. the feed should have a mix of things like:
+
+- interesting topics you might like
+
+- interesting sources you might want to read etc
+
+- new activity/discussion in a forum you are following.
+
+etc
+
+
+the search bar allows you to ask a question, like an area to learn about, or find a source that can be useful, navigate topics, groups, etc
+
+it can be used both as a search engine, using rewalls ai to help learning och researching a new subject, but also as a classic social media community search.
+
+
+AI:
+
+rewall uses AI both for a recommendation engine/algorithm, but also help keep track of ontologogical connections in and between research papers. the platform (that we are focusing on now) is a way for people/users to get their infomation in a way that has higher trust than searching online. rewall is a source of infomation, that adjusts to your preferences of recieving it, aswell as a sophisticated social media platform to encourage community around the areas.
+
+
+Perspective:
+
+one thing that is important is that rewall encorages multiple perspectives. it uses the ai mapping of the sources to understand if there are sources that counter each other, and can therefore provide several countering sources. for topics, we want to encourage multiple different views on a subject and make it easy for a user to learn a subject from multiple different angels and perspectives. this should also be reflected in the ui.
+
+
+the ui should be a landing page/front page, with a main feed where the content is mixed, with different types of content. then we have a search bar that you can use to look into infomation gathering aspects, get questions to answers and community specific things (like finding groups etc).
+
+
+you should be able to enter a persons profile, and each profile needs relevant things like that topics they are following, see their recent contributions in discussions/forums/comments etc.
+
+there should be pages for groups and for topics, and then we need the sources to have a pages aswell. initially we are focusing on research papers, so that means that we need like a discussion field below it,
+
+
+
+
+profile
+
+to be able to handle to adapt the infomation for each user, it will adapt to user feedback, and keep track of things like their style of learning, what kind of content they like and interests. this info should be tra
+
+
+perspective
+
+
+login screen
+
+landing page
+
+
+
+
+
+
+
+1. for the poc, im thinking that the perspective aspect should be visible in the topic-screen. the rewell system will use users discussion data together with its AI ontological mapping system to place them in a vector space, that then could be visualize in spectrums. maybe we can choose different categories, and show relevant research papers on the spectrum where they line up. im  thinking, like this: for a topic like "climate change" we could then allow a user to click a phase (or ask their own) like "is nuclear power worth the risk?" and rewell will show a view with different sources on a spectrum. this particular question might have the left saying not worth the risk, and the right saying worth the risk, and then research papers that are highly relevant to the question shows up along this spectrum. you can click it and then you get to the page for that source.
+
+inside the source, you can read the source paper, and also discuss, reference parts of it and discuss in threads.
+
+back in the topic, when asking this question,  there will be discussion threads that are relevant to your search that will appear that has people discussing. so in the source (research paper) we dont need a spectrum view or anything there. the spectrum view should be the same no matter witch way you entered into it.
+
+
+im thinking, that inside of the source view, users can leave comments at different parts of the the research papers. if a user wants to leave a comment, they can click on the area of text and the discussion side bar will slide out from the right side and they can have a discussion there. this discussion will be mapped to that part of the text.i also want a visualization that shows like a histogram along the edge in the research paper reading area along the vertical edge, that  shows how much discussion has happen across the text, maybe a particullar part is controversial and sparked alot of discussions. i want to vissualize that deep or many threads exists at this part of the text.
+
+
+2. im thinking, we get to a search result page, with a ai generated answer that reflect the status of research backed (kind of how perplexity works, we will use that initially). the user will also be able to ask questions and learn more (like a chatbot) and this chatbot/ai will reference which sources it uses. but we will also have relevant topics and recommended sources listed below.
+
+
+when sarching i also want relevant things to appear in real time, like auto complete, like users, groups, topics etc, but if you choose not to click any of them, and just press enter, then you will get to the search result view i just mentioned.
