@@ -1,0 +1,35 @@
+[
+  {
+    "id": "nature-energy",
+    "name": "Nature Energy",
+    "description": "A leading journal publishing research on all aspects of energy, from generation and storage to distribution and management.",
+    "verified": true,
+    "verifiedSince": "2018-01-01",
+    "website": "https://www.nature.com/nenergy/",
+    "publicationCount": 2340,
+    "topTopics": ["climate-science", "renewable-energy", "nuclear-energy"],
+    "biasScore": 0.52
+  },
+  {
+    "id": "science-journal",
+    "name": "Science",
+    "description": "One of the world's top academic journals, published by the American Association for the Advancement of Science.",
+    "verified": true,
+    "verifiedSince": "2015-06-15",
+    "website": "https://www.science.org/",
+    "publicationCount": 15670,
+    "topTopics": ["artificial-intelligence", "biology", "climate-science"],
+    "biasScore": 0.48
+  },
+  {
+    "id": "nuclear-engineering",
+    "name": "Nuclear Engineering and Design",
+    "description": "International journal covering nuclear engineering research and development.",
+    "verified": true,
+    "verifiedSince": "2019-03-10",
+    "website": "https://www.journals.elsevier.com/nuclear-engineering-and-design",
+    "publicationCount": 8920,
+    "topTopics": ["nuclear-energy", "engineering", "safety"],
+    "biasScore": 0.55
+  }
+]

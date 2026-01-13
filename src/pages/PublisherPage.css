@@ -1,0 +1,202 @@
+.publisher-page {
+  padding-top: calc(var(--header-height) + var(--space-8));
+  padding-bottom: var(--space-16);
+}
+
+.publisher-container {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* Publisher Header */
+.publisher-header {
+  text-align: center;
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.publisher-badge-row {
+  margin-bottom: var(--space-4);
+}
+
+.publisher-name {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+.publisher-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin: 0 auto var(--space-6);
+  line-height: var(--line-height-relaxed);
+}
+
+.publisher-meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.publisher-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-secondary);
+}
+
+/* Section Title */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+/* Trust Section */
+.trust-section {
+  padding: var(--space-6);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+}
+
+.trust-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.trust-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.trust-value {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+}
+
+.trust-value.verified {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-verified);
+}
+
+/* Bias Meter */
+.bias-meter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bias-track {
+  height: 4px;
+  background: linear-gradient(to right, var(--color-spectrum-low), var(--color-text-muted), var(--color-spectrum-high));
+  border-radius: 2px;
+  position: relative;
+}
+
+.bias-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: var(--color-text-primary);
+  border: 2px solid var(--color-bg-primary);
+  border-radius: 50%;
+}
+
+.bias-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* Spectrum Section */
+.spectrum-section {
+  padding: var(--space-6);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+}
+
+.spectrum-description {
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-8);
+}
+
+.mini-spectrum {
+  padding: var(--space-6) 0;
+}
+
+.spectrum-track {
+  height: 2px;
+  background: linear-gradient(to right, var(--color-spectrum-low), var(--color-spectrum-mid), var(--color-spectrum-high));
+  position: relative;
+}
+
+.spectrum-dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--color-text-primary);
+  border: 2px solid var(--color-bg-elevated);
+  border-radius: 50%;
+  transition: transform var(--transition-fast);
+}
+
+.spectrum-dot:hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Publications Section */
+.publications-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.publication-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-decoration: none;
+}
+
+.publication-card h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.publication-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}

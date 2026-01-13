@@ -1,0 +1,55 @@
+[
+  {
+    "id": "disc-1",
+    "sourceId": "nuclear-climate-2024",
+    "paragraphIndex": 3,
+    "author": "dr-jane-doe",
+    "content": "The lifecycle emissions analysis here is particularly compelling. I've seen similar results in our Cambridge study.",
+    "createdAt": "2024-03-20T14:32:00Z",
+    "likes": 45,
+    "replies": [
+      {
+        "id": "reply-1-1",
+        "author": "energy-researcher",
+        "content": "Agreed. Though I'd love to see more data on Gen IV reactors specifically.",
+        "createdAt": "2024-03-20T15:10:00Z",
+        "likes": 12
+      }
+    ]
+  },
+  {
+    "id": "disc-2",
+    "sourceId": "nuclear-climate-2024",
+    "paragraphIndex": 7,
+    "author": "nuclear-engineer",
+    "content": "The safety statistics in this section align with what we're seeing at the IAEA. Modern designs have fundamentally addressed the concerns from older plants.",
+    "createdAt": "2024-03-21T09:15:00Z",
+    "likes": 67,
+    "replies": []
+  },
+  {
+    "id": "disc-3",
+    "sourceId": "ai-workforce-2024",
+    "paragraphIndex": 2,
+    "author": "ai-professor",
+    "content": "The 14% automation risk figure is consistent with our Stanford research, but I think the job creation projections are optimistic.",
+    "createdAt": "2024-02-01T11:45:00Z",
+    "likes": 89,
+    "replies": [
+      {
+        "id": "reply-3-1",
+        "author": "tech-journalist",
+        "content": "What makes you skeptical about the job creation numbers?",
+        "createdAt": "2024-02-01T12:30:00Z",
+        "likes": 23
+      },
+      {
+        "id": "reply-3-2",
+        "author": "ai-professor",
+        "content": "Historical precedent. The transition period often takes decades, during which displacement is painful.",
+        "createdAt": "2024-02-01T13:15:00Z",
+        "likes": 34
+      }
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ai-ethics-study-group",
+    "name": "AI Ethics Study Group",
+    "description": "Discussing the ethical implications of artificial intelligence in society.",
+    "memberCount": 2340,
+    "topics": ["artificial-intelligence", "ethics", "future-of-work"],
+    "isPrivate": false
+  },
+  {
+    "id": "climate-science-collective",
+    "name": "Climate Science Collective",
+    "description": "Researchers and enthusiasts discussing climate research and solutions.",
+    "memberCount": 5621,
+    "topics": ["climate-science", "sustainability", "nuclear-energy"],
+    "isPrivate": false
+  },
+  {
+    "id": "nuclear-energy-debate",
+    "name": "Nuclear Energy Debate",
+    "description": "A space for balanced discussion on nuclear power pros and cons.",
+    "memberCount": 1892,
+    "topics": ["nuclear-energy", "climate-science", "energy-policy"],
+    "isPrivate": false
+  },
+  {
+    "id": "future-of-work-forum",
+    "name": "Future of Work Forum",
+    "description": "Exploring how technology is reshaping employment and careers.",
+    "memberCount": 3450,
+    "topics": ["future-of-work", "artificial-intelligence", "automation"],
+    "isPrivate": false
+  }
+]

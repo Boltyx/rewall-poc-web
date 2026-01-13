@@ -1,0 +1,52 @@
+[
+  {
+    "id": "dr-jane-doe",
+    "username": "drjanedoe",
+    "displayName": "Dr. Jane Doe",
+    "avatar": null,
+    "bio": "Climate scientist at MIT. Researching sustainable energy solutions.",
+    "verified": true,
+    "affiliation": "MIT",
+    "expertise": ["climate-science", "nuclear-energy", "sustainability"]
+  },
+  {
+    "id": "energy-researcher",
+    "username": "energyresearcher",
+    "displayName": "Energy Researcher",
+    "avatar": null,
+    "bio": "Independent researcher focused on global energy transitions.",
+    "verified": false,
+    "affiliation": null,
+    "expertise": ["nuclear-energy", "renewable-energy"]
+  },
+  {
+    "id": "ai-professor",
+    "username": "aiprofessor",
+    "displayName": "Prof. Alan Turing Jr.",
+    "avatar": null,
+    "bio": "AI Ethics researcher at Stanford. Concerned about responsible AI development.",
+    "verified": true,
+    "affiliation": "Stanford University",
+    "expertise": ["artificial-intelligence", "ethics", "future-of-work"]
+  },
+  {
+    "id": "tech-journalist",
+    "username": "techjournalist",
+    "displayName": "Sarah Chen",
+    "avatar": null,
+    "bio": "Tech journalist covering AI, automation, and the future of work.",
+    "verified": true,
+    "affiliation": "The Verge",
+    "expertise": ["artificial-intelligence", "technology", "media"]
+  },
+  {
+    "id": "nuclear-engineer",
+    "username": "nuclearengineer",
+    "displayName": "Dr. Marcus Weber",
+    "avatar": null,
+    "bio": "Nuclear engineer with 20 years experience. Advocate for safe nuclear power.",
+    "verified": true,
+    "affiliation": "IAEA",
+    "expertise": ["nuclear-energy", "engineering", "safety"]
+  }
+]

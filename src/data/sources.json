@@ -1,0 +1,74 @@
+[
+  {
+    "id": "nuclear-climate-2024",
+    "title": "The Role of Nuclear Power in Climate Change Mitigation: A Comprehensive Review",
+    "abstract": "This paper examines the potential of nuclear power as a low-carbon energy source in the context of global climate change mitigation efforts. We analyze lifecycle emissions, safety records, economic factors, and public perception across 47 countries.",
+    "authors": [
+      { "name": "Dr. Elena Rodriguez", "affiliation": "University of Cambridge" },
+      { "name": "Prof. Hiroshi Tanaka", "affiliation": "Tokyo Institute of Technology" }
+    ],
+    "publisher": {
+      "id": "nature-energy",
+      "name": "Nature Energy",
+      "verified": true
+    },
+    "publishedDate": "2024-03-15",
+    "doi": "10.1038/s41560-024-01234-5",
+    "topics": ["nuclear-energy", "climate-science"],
+    "spectrumPositions": {
+      "risk-assessment": 0.65,
+      "climate-solution": 0.82,
+      "economic-viability": 0.45
+    },
+    "citationCount": 127,
+    "discussionCount": 89
+  },
+  {
+    "id": "ai-workforce-2024",
+    "title": "Artificial Intelligence and the Future of Work: Job Displacement vs. Job Creation",
+    "abstract": "This study provides empirical analysis of AI's impact on employment across 23 industries in developed economies. We find nuanced effects: while 14% of current jobs face high automation risk, AI is projected to create 12 million new roles by 2030.",
+    "authors": [
+      { "name": "Dr. Michael Chen", "affiliation": "MIT Sloan" },
+      { "name": "Dr. Sarah Williams", "affiliation": "Oxford Internet Institute" }
+    ],
+    "publisher": {
+      "id": "science-journal",
+      "name": "Science",
+      "verified": true
+    },
+    "publishedDate": "2024-01-22",
+    "doi": "10.1126/science.2024.ai.workforce",
+    "topics": ["artificial-intelligence", "future-of-work"],
+    "spectrumPositions": {
+      "job-impact": 0.52,
+      "safety-concern": 0.38,
+      "benefit-society": 0.71
+    },
+    "citationCount": 234,
+    "discussionCount": 156
+  },
+  {
+    "id": "nuclear-safety-2023",
+    "title": "Modern Nuclear Reactor Safety: Lessons from Three Decades of Operation",
+    "abstract": "Analysis of safety incidents and near-misses across 440 operational nuclear reactors worldwide. We find that modern Gen III+ designs show a 94% reduction in incident rates compared to older designs.",
+    "authors": [
+      { "name": "Dr. Marcus Weber", "affiliation": "IAEA" },
+      { "name": "Dr. Anna Kowalski", "affiliation": "Polish Nuclear Research Centre" }
+    ],
+    "publisher": {
+      "id": "nuclear-engineering",
+      "name": "Nuclear Engineering and Design",
+      "verified": true
+    },
+    "publishedDate": "2023-11-08",
+    "doi": "10.1016/j.nucengdes.2023.112567",
+    "topics": ["nuclear-energy"],
+    "spectrumPositions": {
+      "risk-assessment": 0.78,
+      "climate-solution": 0.70,
+      "economic-viability": 0.55
+    },
+    "citationCount": 89,
+    "discussionCount": 67
+  }
+]

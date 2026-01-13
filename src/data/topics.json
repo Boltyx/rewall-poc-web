@@ -1,0 +1,83 @@
+[
+  {
+    "id": "nuclear-energy",
+    "slug": "nuclear-energy",
+    "name": "Nuclear Energy",
+    "description": "The use of nuclear reactions to produce electricity and heat.",
+    "questionsForSpectrum": [
+      {
+        "id": "risk-assessment",
+        "question": "Is nuclear power worth the risk?",
+        "leftLabel": "High Risk",
+        "rightLabel": "Low Risk"
+      },
+      {
+        "id": "climate-solution",
+        "question": "Is nuclear power an effective climate solution?",
+        "leftLabel": "Ineffective",
+        "rightLabel": "Highly Effective"
+      },
+      {
+        "id": "economic-viability",
+        "question": "Is nuclear power economically viable?",
+        "leftLabel": "Too Expensive",
+        "rightLabel": "Cost Effective"
+      }
+    ],
+    "relatedTopics": ["climate-science", "energy-policy", "sustainability"],
+    "sourceCount": 156,
+    "discussionCount": 423
+  },
+  {
+    "id": "artificial-intelligence",
+    "slug": "artificial-intelligence",
+    "name": "Artificial Intelligence",
+    "description": "The simulation of human intelligence processes by computer systems.",
+    "questionsForSpectrum": [
+      {
+        "id": "job-impact",
+        "question": "Will AI create more jobs than it destroys?",
+        "leftLabel": "Net Job Loss",
+        "rightLabel": "Net Job Gain"
+      },
+      {
+        "id": "safety-concern",
+        "question": "Is AI development safe?",
+        "leftLabel": "High Risk",
+        "rightLabel": "Low Risk"
+      },
+      {
+        "id": "benefit-society",
+        "question": "Will AI benefit society overall?",
+        "leftLabel": "Harmful",
+        "rightLabel": "Beneficial"
+      }
+    ],
+    "relatedTopics": ["future-of-work", "ethics", "automation"],
+    "sourceCount": 284,
+    "discussionCount": 892
+  },
+  {
+    "id": "climate-science",
+    "slug": "climate-science",
+    "name": "Climate Science",
+    "description": "The study of climate, scientifically analyzing patterns and long-term atmospheric conditions.",
+    "questionsForSpectrum": [
+      {
+        "id": "urgency",
+        "question": "How urgent is climate action?",
+        "leftLabel": "Not Urgent",
+        "rightLabel": "Critical"
+      },
+      {
+        "id": "human-cause",
+        "question": "Is climate change primarily human-caused?",
+        "leftLabel": "Natural Causes",
+        "rightLabel": "Human Causes"
+      }
+    ],
+    "relatedTopics": ["nuclear-energy", "sustainability", "energy-policy"],
+    "sourceCount": 521,
+    "discussionCount": 1205
+  }
+]

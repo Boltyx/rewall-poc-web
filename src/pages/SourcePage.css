@@ -1,0 +1,201 @@
+.source-page {
+  padding-top: calc(var(--header-height) + var(--space-8));
+  padding-bottom: var(--space-16);
+}
+
+.source-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Source Header */
+.source-header {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto var(--space-12);
+  text-align: center;
+}
+
+.source-publisher-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--space-4);
+}
+
+.source-publisher-link:hover {
+  color: var(--color-text-primary);
+}
+
+.verified-icon {
+  color: var(--color-verified);
+}
+
+.source-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-6);
+}
+
+.source-authors-list {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.source-meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.source-doi {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+}
+
+/* Reader Layout */
+.reader-layout {
+  display: grid;
+  grid-template-columns: 1fr 24px 300px;
+  gap: var(--space-6);
+}
+
+@media (max-width: 900px) {
+  .reader-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .heatmap-bar {
+    display: none;
+  }
+  
+  .discussion-sidebar {
+    order: 2;
+  }
+}
+
+/* Reader Content */
+.reader-content {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  padding: var(--space-8);
+}
+
+.reader-paragraph {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-4);
+  border-left: 2px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.reader-paragraph.has-discussions {
+  border-left-color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.reader-paragraph.has-discussions:hover {
+  color: var(--color-text-primary);
+}
+
+/* Heatmap Bar */
+.heatmap-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.heatmap-container {
+  flex: 1;
+  width: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.heatmap-segment {
+  flex: 1;
+  width: 100%;
+  min-height: 20px;
+  border-radius: 2px;
+}
+
+.heatmap-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+/* Discussion Sidebar */
+.discussion-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-8));
+  align-self: start;
+  max-height: calc(100vh - var(--header-height) - var(--space-16));
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.discussions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.discussion-card {
+  padding: var(--space-4);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+}
+
+.discussion-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.author-name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.discussion-content {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-3);
+}
+
+.discussion-meta {
+  display: flex;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}

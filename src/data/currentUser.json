@@ -1,0 +1,21 @@
+{
+  "id": "bob-wilson",
+  "username": "bobwilson",
+  "displayName": "Bob Wilson",
+  "email": "bob.wilson@example.com",
+  "avatar": null,
+  "bio": "Curious about technology, science, and the future of work.",
+  "joinedDate": "2024-06-15",
+  "interests": [
+    "artificial-intelligence",
+    "climate-science",
+    "nuclear-energy",
+    "future-of-work"
+  ],
+  "following": {
+    "topics": ["artificial-intelligence", "nuclear-energy", "climate-science"],
+    "users": ["dr-jane-doe", "energy-researcher"],
+    "groups": ["ai-ethics-study-group", "climate-science-collective"]
+  },
+  "learningStyle": "active"
+}
