@@ -2,6 +2,9 @@
   padding-top: calc(var(--header-height) + var(--space-6));
   padding-bottom: var(--space-16);
   min-height: 100vh;
+  /* Smooth momentum scrolling */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .feed-container {
@@ -15,9 +18,31 @@
   flex-direction: column;
 }
 
+/* Feed item wrapper for hover effects */
+.feed-item-wrapper {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feed-item-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+/* Subtle glow on hover for cards */
+.feed-item-wrapper:hover .feed-item--card {
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+              0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
 /* Responsive adjustments */
 @media (max-width: 640px) {
   .feed-container {
     padding: 0 var(--space-3);
+  }
+  
+  /* Disable hover lift on mobile - can cause jank */
+  .feed-item-wrapper:hover {
+    transform: none;
   }
 }

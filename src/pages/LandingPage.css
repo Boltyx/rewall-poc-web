@@ -64,7 +64,8 @@
 
 .login-submit {
   margin-top: var(--space-2);
-  width: 100%;
+  width: 50%;
+  align-self: center;
 }
 
 /* Loading state */
