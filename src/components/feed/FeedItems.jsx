@@ -4,8 +4,9 @@ import './FeedItems.css';
 
 // Discussion Thread - Reddit-style post
 export function FeedDiscussion({ item }) {
+  const className = `feed-item feed-item--discussion ${item.isControversial ? 'feed-item--controversial' : ''}`;
   return (
-    <article className="feed-item feed-item--discussion">
+    <article className={className}>
       <div className="feed-item__label">
         <Link to={`/topic/${item.topic.id}`} className="feed-item__topic-link">
           #{item.topic.name}
@@ -39,8 +40,9 @@ export function FeedDiscussion({ item }) {
 
 // New Paper
 export function FeedPaper({ item }) {
+  const className = `feed-item feed-item--paper feed-item--card ${item.isControversial ? 'feed-item--controversial' : ''}`;
   return (
-    <article className="feed-item feed-item--paper feed-item--card">
+    <article className={className}>
       <div className="feed-item__label">NEW PAPER</div>
       <h3 className="feed-item__title">
         <Link to={`/source/${item.source.id}`}>{item.source.title}</Link>
@@ -120,11 +122,13 @@ export function FeedComment({ item }) {
 
 // Topics For You
 export function FeedTopics({ item }) {
+  // Limit to 3 topics to prevent row wrapping
+  const displayTopics = item.topics.slice(0, 3);
   return (
-    <article className="feed-item feed-item--topics">
+    <article className="feed-item feed-item--topics feed-item--card">
       <div className="feed-item__label">TOPICS FOR YOU</div>
       <div className="feed-item__pills">
-        {item.topics.map(topic => (
+        {displayTopics.map(topic => (
           <Link key={topic.id} to={`/topic/${topic.slug}`} className="feed-item__pill">
             #{topic.name}
           </Link>
@@ -137,9 +141,10 @@ export function FeedTopics({ item }) {
 // Spectrum Question with Histogram
 export function FeedSpectrum({ item }) {
   const maxVal = Math.max(...item.distribution);
+  const className = `feed-item feed-item--spectrum feed-item--card ${item.isControversial ? 'feed-item--controversial' : ''}`;
   
   return (
-    <article className="feed-item feed-item--spectrum feed-item--card">
+    <article className={className}>
       <div className="feed-item__label">HOT QUESTION</div>
       <h3 className="feed-item__question">
         <Link to={`/topic/${item.topic.slug}`}>{item.question}</Link>
@@ -206,7 +211,7 @@ function generateHistogramPath(data, max) {
 // Publisher Update
 export function FeedPublisher({ item }) {
   return (
-    <article className="feed-item feed-item--publisher">
+    <article className="feed-item feed-item--publisher feed-item--card">
       <div className="feed-item__label">PUBLISHER UPDATE</div>
       <div className="feed-item__publisher-row">
         {item.publisher.verified && <CheckCircle size={14} className="feed-item__verified" />}
@@ -222,7 +227,7 @@ export function FeedPublisher({ item }) {
 // Trending Questions
 export function FeedTrendingQuestions({ item }) {
   return (
-    <article className="feed-item feed-item--trending">
+    <article className="feed-item feed-item--trending feed-item--card">
       <div className="feed-item__label">
         <TrendingUp size={12} />
         TRENDING QUESTIONS

@@ -1,42 +1,113 @@
-/* Feed Items Base */
+/* =============================================
+   FEED ITEMS - TWO-TIER VISUAL SYSTEM
+   Tier 1 (Base): Floating, transparent, minimal
+   Tier 2 (Card): Elevated with background & accent
+   ============================================= */
+
+/* Base Layer - Floating/Transparent */
 .feed-item {
-  padding: var(--space-6) 0;
+  padding: var(--space-5) var(--space-4);
   position: relative;
+  transition: background 0.2s ease;
 }
 
-/* Fading divider line */
-.feed-item::after {
+/* BASE LAYER ITEMS - No accent, floating */
+.feed-item--discussion,
+.feed-item--network,
+.feed-item--group {
+  background: transparent;
+  border-left: none;
+}
+
+/* Comment gets subtle quote styling */
+.feed-item--comment {
+  background: transparent;
+  border-left: 2px solid rgba(168, 85, 247, 0.4);
+  padding-left: var(--space-5);
+  margin-left: var(--space-2);
+}
+
+/* CARD LAYER - Elevated items with accents */
+.feed-item--card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: var(--space-5);
+  margin: var(--space-3) 0;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 3px solid;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Card accent colors */
+.feed-item--paper.feed-item--card {
+  border-left-color: #3b82f6; /* Blue - research */
+}
+
+.feed-item--spectrum.feed-item--card {
+  border-left-width: 4px;
+  border-image: linear-gradient(to bottom, #3b82f6, #a855f7, #ef4444) 1;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.feed-item--trending.feed-item--card {
+  border-left-color: #fbbf24; /* Yellow - hot */
+}
+
+.feed-item--publisher.feed-item--card {
+  border-left-color: #f59e0b; /* Gold - official */
+}
+
+.feed-item--digest.feed-item--card {
+  border-left-color: rgba(255, 255, 255, 0.3);
+}
+
+.feed-item--topics.feed-item--card {
+  border-left-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Controversial modifier - applies to both tiers */
+.feed-item--controversial {
+  border-left: 3px solid #f97316 !important;
+  background: rgba(249, 115, 22, 0.03);
+}
+
+.feed-item--controversial::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #f97316;
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
+}
+
+/* Fading divider line - only for base layer */
+.feed-item--discussion::after,
+.feed-item--network::after,
+.feed-item--group::after,
+.feed-item--comment::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 90%;
   height: 1px;
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(255, 255, 255, 0.1) 20%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.1) 80%,
+    rgba(255, 255, 255, 0.06) 15%,
+    rgba(255, 255, 255, 0.10) 50%,
+    rgba(255, 255, 255, 0.06) 85%,
     transparent 100%
   );
 }
 
 .feed-item:last-child::after {
   display: none;
-}
-
-/* Card variant */
-.feed-item--card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: var(--space-5);
-  margin: var(--space-2) 0;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Labels */

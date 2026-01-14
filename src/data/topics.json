@@ -79,5 +79,98 @@
     "relatedTopics": ["nuclear-energy", "sustainability", "energy-policy"],
     "sourceCount": 521,
     "discussionCount": 1205
+  },
+  {
+    "id": "geopolitics",
+    "slug": "geopolitics",
+    "name": "Geopolitics",
+    "description": "The study of the effects of geography on international politics and relations.",
+    "questionsForSpectrum": [
+      {
+        "id": "nato-future",
+        "question": "What is the future of NATO?",
+        "leftLabel": "Declining",
+        "rightLabel": "Strengthening"
+      },
+      {
+        "id": "trump-impact",
+        "question": "How will Trump's policies reshape global alliances?",
+        "leftLabel": "Destabilizing",
+        "rightLabel": "Beneficial"
+      },
+      {
+        "id": "china-threat",
+        "question": "Is the Western view of China biased?",
+        "leftLabel": "Accurate",
+        "rightLabel": "Biased"
+      }
+    ],
+    "relatedTopics": ["world-order", "economics", "defense"],
+    "sourceCount": 342,
+    "discussionCount": 1567
+  },
+  {
+    "id": "world-order",
+    "slug": "world-order",
+    "name": "World Order",
+    "description": "The distribution of power and relationships between nations shaping global governance.",
+    "questionsForSpectrum": [
+      {
+        "id": "china-rise",
+        "question": "Is China's rise a threat to global stability?",
+        "leftLabel": "Major Threat",
+        "rightLabel": "Not a Threat"
+      },
+      {
+        "id": "us-hegemony",
+        "question": "Is US global hegemony ending?",
+        "leftLabel": "Ending",
+        "rightLabel": "Continuing"
+      }
+    ],
+    "relatedTopics": ["geopolitics", "economics", "defense"],
+    "sourceCount": 198,
+    "discussionCount": 876
+  },
+  {
+    "id": "spaceflight",
+    "slug": "spaceflight",
+    "name": "Spaceflight",
+    "description": "The use of space technology to achieve human and robotic flight beyond Earth's atmosphere.",
+    "questionsForSpectrum": [
+      {
+        "id": "mars-colony",
+        "question": "Will humans establish a Mars colony by 2050?",
+        "leftLabel": "Unlikely",
+        "rightLabel": "Very Likely"
+      },
+      {
+        "id": "space-commercialization",
+        "question": "Should space be commercialized?",
+        "leftLabel": "No, Keep Public",
+        "rightLabel": "Yes, Privatize"
+      }
+    ],
+    "relatedTopics": ["technology", "physics", "engineering"],
+    "sourceCount": 234,
+    "discussionCount": 567
+  },
+  {
+    "id": "railway-history",
+    "slug": "railway-history",
+    "name": "Railway History",
+    "description": "The historical development and impact of rail transportation on society and industry.",
+    "questionsForSpectrum": [
+      {
+        "id": "industrial-impact",
+        "question": "Were railways the most important industrial revolution invention?",
+        "leftLabel": "Overrated",
+        "rightLabel": "Most Important"
+      }
+    ],
+    "relatedTopics": ["history", "economics", "engineering"],
+    "sourceCount": 89,
+    "discussionCount": 145
   }
 ]
+

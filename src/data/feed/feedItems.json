@@ -137,5 +137,78 @@
       "3 new papers on carbon capture technology",
       "Trending: Is 2°C still achievable?"
     ]
+  },
+  {
+    "id": "feed-13",
+    "type": "discussion_thread",
+    "topic": { "id": "geopolitics", "name": "Geopolitics" },
+    "author": { "id": "foreign-policy-analyst", "username": "fpanalyst", "displayName": "Mark Richardson", "verified": true },
+    "title": "NATO's future under Trump 2.0: What the data actually shows",
+    "preview": "Beyond the rhetoric, let's look at defense spending trends, alliance cohesion metrics, and what European defense ministers are actually preparing for...",
+    "commentCount": 234,
+    "isControversial": true,
+    "createdAt": "2024-03-21T08:15:00Z"
+  },
+  {
+    "id": "feed-14",
+    "type": "spectrum_question",
+    "question": "Is the Western view of China biased?",
+    "topic": { "id": "geopolitics", "name": "Geopolitics", "slug": "geopolitics" },
+    "leftLabel": "Accurate",
+    "rightLabel": "Biased",
+    "distribution": [0.08, 0.12, 0.15, 0.20, 0.18, 0.12, 0.08, 0.04, 0.02, 0.01],
+    "sourceCount": 89,
+    "isControversial": true
+  },
+  {
+    "id": "feed-15",
+    "type": "discussion_thread",
+    "topic": { "id": "spaceflight", "name": "Spaceflight" },
+    "author": { "id": "space-engineer", "username": "starshipengineer", "displayName": "Elena Kowalski", "verified": false },
+    "title": "Starship's 5th test: What it means for Mars timeline",
+    "preview": "The successful catch was impressive, but the thermal protection issues we're seeing suggest the 2026 cargo mission timeline needs serious revision...",
+    "commentCount": 156,
+    "isControversial": false,
+    "createdAt": "2024-03-20T16:45:00Z"
+  },
+  {
+    "id": "feed-16",
+    "type": "new_paper",
+    "source": {
+      "id": "china-economics-2024",
+      "title": "Reassessing China's Economic Model: Beyond Western Frameworks",
+      "publisher": { "name": "Foreign Affairs", "verified": true }
+    },
+    "hookQuestions": [
+      "Is the 'China collapse' narrative overblown?",
+      "What do internal Chinese data sources reveal?",
+      "How accurate are Western GDP estimates?"
+    ],
+    "commentCount": 178,
+    "isControversial": true,
+    "readCount": 892
+  },
+  {
+    "id": "feed-17",
+    "type": "spectrum_question",
+    "question": "Will humans establish a Mars colony by 2050?",
+    "topic": { "id": "spaceflight", "name": "Spaceflight", "slug": "spaceflight" },
+    "leftLabel": "Unlikely",
+    "rightLabel": "Very Likely",
+    "distribution": [0.15, 0.18, 0.20, 0.15, 0.12, 0.08, 0.06, 0.03, 0.02, 0.01],
+    "sourceCount": 67
+  },
+  {
+    "id": "feed-18",
+    "type": "comment_highlight",
+    "author": { "id": "historian", "username": "railwayhistorian", "displayName": "Dr. James Whitworth", "verified": true },
+    "content": "People forget that railways didn't just move goods—they synchronized time itself. Before railways, every town had its own local time. The standardization of time zones is arguably their most overlooked legacy.",
+    "target": {
+      "type": "source",
+      "id": "railway-impact-2024",
+      "title": "The Hidden Legacies of 19th Century Railways"
+    },
+    "likes": 234
   }
 ]
+
