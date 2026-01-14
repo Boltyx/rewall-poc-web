@@ -13,6 +13,22 @@
   z-index: var(--z-sticky);
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.header-logo {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  line-height: 1;
+}
+
 .header-icon-btn {
   display: flex;
   align-items: center;
@@ -371,20 +387,24 @@
 /* Sidebar */
 .sidebar-overlay {
   position: fixed;
-  inset: 0;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.7);
-  z-index: var(--z-modal);
+  z-index: 180; /* Below header (200) */
+  backdrop-filter: blur(2px);
 }
 
 .sidebar {
   position: fixed;
-  top: 0;
+  top: var(--header-height);
   left: 0;
   bottom: 0;
   width: 280px;
   background: var(--color-bg-secondary);
   border-right: 1px solid var(--color-border);
-  z-index: calc(var(--z-modal) + 1);
+  z-index: 190; /* Below header (200) but above overlay */
   display: flex;
   flex-direction: column;
   overflow: hidden;

@@ -11,29 +11,36 @@
   transition: background 0.2s ease;
 }
 
-/* BASE LAYER ITEMS - No accent, floating */
+/* BASE LAYER ITEMS - No accent, floating, pure text */
+/* padding-left: 0 aligns text with where card left borders are */
 .feed-item--discussion,
 .feed-item--network,
 .feed-item--group {
   background: transparent;
   border-left: none;
+  border: none;
+  padding-left: 0;
 }
 
 /* Comment gets subtle quote styling */
 .feed-item--comment {
   background: transparent;
-  border-left: 2px solid rgba(168, 85, 247, 0.4);
+  border-left: 2px solid rgba(168, 85, 247, 0.3);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
   padding-left: var(--space-5);
-  margin-left: var(--space-2);
 }
 
 /* CARD LAYER - Elevated items with accents */
 .feed-item--card {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.025);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: var(--space-5);
+  padding-left: calc(var(--space-5) + 3px);
   margin: var(--space-3) 0;
+  margin-left: 0;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-left: 3px solid;
@@ -67,13 +74,13 @@
   border-left-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Controversial modifier - applies to both tiers */
-.feed-item--controversial {
+/* Controversial modifier - ONLY applies to cards */
+.feed-item--card.feed-item--controversial {
   border-left: 3px solid #f97316 !important;
   background: rgba(249, 115, 22, 0.03);
 }
 
-.feed-item--controversial::before {
+.feed-item--card.feed-item--controversial::before {
   content: '';
   position: absolute;
   left: 0;
@@ -82,6 +89,7 @@
   width: 3px;
   background: #f97316;
   box-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
 }
 
 /* Fading divider line - only for base layer */
@@ -245,6 +253,43 @@
   display: flex;
   align-items: center;
   gap: var(--space-1);
+}
+
+/* Footer row - meta left, topics right */
+.feed-item__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.feed-item__footer .feed-item__meta {
+  margin-top: 0;
+}
+
+/* Topic tags */
+.feed-item__topic-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.feed-item__topic-tag {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 2px var(--space-2);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.feed-item__topic-tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-primary);
 }
 
 /* Badges */

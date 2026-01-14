@@ -93,13 +93,17 @@ function Header() {
   return (
     <>
       <header className="header">
-        <button 
-          className="header-icon-btn"
-          onClick={() => setSidebarOpen(true)}
-          aria-label="Menu"
-        >
-          <Menu size={20} strokeWidth={1.5} />
-        </button>
+        <div className="header-left">
+          <button 
+            className="header-icon-btn"
+            onClick={() => setSidebarOpen(true)}
+            aria-label="Menu"
+          >
+            <Menu size={20} strokeWidth={1.5} />
+          </button>
+
+          <Link to="/feed" className="header-logo">REWALL</Link>
+        </div>
 
         {/* Pill Search */}
         <div className="search-pill-wrapper" ref={searchRef}>
@@ -329,9 +333,8 @@ function Header() {
               transition={{ type: 'tween', duration: 0.25 }}
             >
               <div className="sidebar-header">
-                <Link to="/feed" className="sidebar-logo" onClick={() => setSidebarOpen(false)}>
-                  REWALL
-                </Link>
+                {/* Logo removed as it is visible in main header */}
+                <div style={{ flex: 1 }}></div>
                 <button className="header-icon-btn" onClick={() => setSidebarOpen(false)}>
                   <X size={20} strokeWidth={1.5} />
                 </button>

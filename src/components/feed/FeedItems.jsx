@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import { MessageSquare, Flame, BookOpen, Users, TrendingUp, Clock, CheckCircle } from 'lucide-react';
 import './FeedItems.css';
 
-// Discussion Thread - Reddit-style post
+// Discussion Thread - Reddit-style post (Floating/Base layer)
 export function FeedDiscussion({ item }) {
-  const className = `feed-item feed-item--discussion ${item.isControversial ? 'feed-item--controversial' : ''}`;
+  // Discussions are always floating - no card styling, no border accent
   return (
-    <article className={className}>
+    <article className="feed-item feed-item--discussion">
       <div className="feed-item__label">
         <Link to={`/topic/${item.topic.id}`} className="feed-item__topic-link">
           #{item.topic.name}
@@ -58,17 +58,23 @@ export function FeedPaper({ item }) {
           ))}
         </ul>
       )}
-      <div className="feed-item__actions">
-        <Link to={`/source/${item.source.id}`} className="feed-item__btn">
-          READ →
-        </Link>
-      </div>
-      <div className="feed-item__meta">
-        <span className="feed-item__stat">{item.readCount} reads</span>
-        <span className="feed-item__stat">
-          <MessageSquare size={14} />
-          {item.commentCount}
-        </span>
+      <div className="feed-item__footer">
+        <div className="feed-item__meta">
+          <span className="feed-item__stat">{item.readCount} reads</span>
+          <span className="feed-item__stat">
+            <MessageSquare size={14} />
+            {item.commentCount}
+          </span>
+        </div>
+        {item.topics && (
+          <div className="feed-item__topic-tags">
+            {item.topics.map(topic => (
+              <Link key={topic.id} to={`/topic/${topic.slug}`} className="feed-item__topic-tag">
+                #{topic.name}
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </article>
   );
