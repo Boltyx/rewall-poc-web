@@ -3,8 +3,8 @@
    Minimalist • Typography-driven • Premium
    ============================================ */
 
-/* Google Font - Bebas Neue for headlines */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap");
+/* Google Fonts - Arimo for titles, Poppins for body */
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 /* ============================================
    CSS VARIABLES - DESIGN TOKENS
@@ -38,8 +38,8 @@
   --color-spectrum-high: #ef4444;
 
   /* Typography */
-  --font-display: "Bebas Neue", sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Arimo", sans-serif;
+  --font-body: "Poppins", system-ui, -apple-system, sans-serif;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;

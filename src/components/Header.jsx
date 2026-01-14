@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, User, X } from 'lucide-react';
+import { Menu, User, X, Bell } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import currentUser from '../data/currentUser.json';
 import users from '../data/users.json';
@@ -12,8 +12,22 @@ function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchFocused, setSearchFocused] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
   const searchRef = useRef(null);
+  const notificationsRef = useRef(null);
+  const profileRef = useRef(null);
   const navigate = useNavigate();
+
+  // Sample notifications data
+  const notifications = [
+    { id: 1, type: 'reply', text: '@researcher_jane replied to your comment on "AI Safety"', time: '2m ago', unread: true },
+    { id: 2, type: 'tag', text: 'You were tagged in "Is nuclear power the solution?"', time: '15m ago', unread: true },
+    { id: 3, type: 'follow', text: 'Dr. Smith started following you', time: '1h ago', unread: true },
+    { id: 4, type: 'citation', text: 'Your saved paper was cited 12 times today', time: '3h ago', unread: false },
+    { id: 5, type: 'group', text: 'New discussion in "Climate Scientists"', time: '5h ago', unread: false },
+  ];
+  const unreadCount = notifications.filter(n => n.unread).length;
 
   // Normalize query for matching
   const normalizedQuery = searchQuery.toLowerCase().trim();
@@ -59,11 +73,17 @@ function Header() {
     setSearchFocused(false);
   };
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (searchRef.current && !searchRef.current.contains(e.target)) {
         setSearchFocused(false);
+      }
+      if (notificationsRef.current && !notificationsRef.current.contains(e.target)) {
+        setNotificationsOpen(false);
+      }
+      if (profileRef.current && !profileRef.current.contains(e.target)) {
+        setProfileOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -91,7 +111,7 @@ function Header() {
             <input
               type="text"
               className="search-pill-input"
-              placeholder="Search topics, papers, people..."
+              placeholder="Discover topics, papers, people..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setSearchFocused(true)}
@@ -191,9 +211,103 @@ function Header() {
           </AnimatePresence>
         </div>
 
-        <Link to={`/profile/${currentUser.username}`} className="header-icon-btn">
-          <User size={20} strokeWidth={1.5} />
-        </Link>
+        {/* Header Right Actions */}
+        <div className="header-actions">
+          {/* Notifications */}
+          <div className="header-dropdown-wrapper" ref={notificationsRef}>
+            <button 
+              className="header-icon-btn header-icon-btn--badge"
+              onClick={() => setNotificationsOpen(!notificationsOpen)}
+              aria-label="Notifications"
+            >
+              <Bell size={20} strokeWidth={1.5} />
+              {unreadCount > 0 && (
+                <span className="header-badge">{unreadCount}</span>
+              )}
+            </button>
+            
+            <AnimatePresence>
+              {notificationsOpen && (
+                <motion.div 
+                  className="header-dropdown notifications-dropdown"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  <div className="notifications-header">
+                    <span className="notifications-title">Notifications</span>
+                    {unreadCount > 0 && (
+                      <span className="notifications-unread-count">{unreadCount} unread</span>
+                    )}
+                  </div>
+                  <div className="notifications-list">
+                    {notifications.map(notification => (
+                      <div 
+                        key={notification.id} 
+                        className={`notification-item ${notification.unread ? 'notification-item--unread' : ''}`}
+                      >
+                        <p className="notification-text">{notification.text}</p>
+                        <span className="notification-time">{notification.time}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Profile */}
+          <div className="header-dropdown-wrapper" ref={profileRef}>
+            <button 
+              className="header-icon-btn"
+              onClick={() => setProfileOpen(!profileOpen)}
+              aria-label="Profile"
+            >
+              <User size={20} strokeWidth={1.5} />
+            </button>
+            
+            <AnimatePresence>
+              {profileOpen && (
+                <motion.div 
+                  className="header-dropdown profile-dropdown"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  <div className="profile-info">
+                    <div className="profile-avatar">{currentUser.displayName.charAt(0)}</div>
+                    <div className="profile-details">
+                      <span className="profile-name">{currentUser.displayName}</span>
+                      <span className="profile-handle">@{currentUser.username}</span>
+                    </div>
+                  </div>
+                  <div className="profile-stats">
+                    <div className="profile-stat">
+                      <span className="profile-stat-value">{currentUser.following.topics.length}</span>
+                      <span className="profile-stat-label">Topics</span>
+                    </div>
+                    <div className="profile-stat">
+                      <span className="profile-stat-value">{currentUser.following.groups.length}</span>
+                      <span className="profile-stat-label">Groups</span>
+                    </div>
+                  </div>
+                  <Link 
+                    to={`/profile/${currentUser.username}`} 
+                    className="profile-link"
+                    onClick={() => setProfileOpen(false)}
+                  >
+                    Go to my profile
+                  </Link>
+                  <button className="profile-upgrade-btn">
+                    Upgrade to Premium
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
       </header>
 
       {/* Sidebar */}
