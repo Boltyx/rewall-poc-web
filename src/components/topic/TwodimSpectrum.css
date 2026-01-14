@@ -1,0 +1,120 @@
+/* Embedded container for accordian style */
+.spectrum-container-embedded {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-2) 0;
+}
+
+.spectrum-chart-wrapper-embedded {
+  position: relative;
+  background: rgba(0,0,0,0.3); /* Slightly darker to show depth */
+  border-radius: 0 0 var(--radius-md) var(--radius-md); /* Curved bottom only */
+  padding: var(--space-4) var(--space-2);
+  border-top: 1px solid rgba(255,255,255,0.05); /* Separator line */
+}
+
+/* Axis Labels */
+.spectrum-axis-label {
+  fill: var(--color-text-muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.spectrum-axis-label.vertical {
+  fill: var(--color-text-secondary);
+}
+
+.spectrum-axis-label.horizontal {
+  fill: var(--color-text-secondary);
+}
+
+/* Custom Tooltip */
+.spectrum-tooltip {
+  background: rgba(20, 20, 25, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  min-width: 250px;
+}
+
+.spectrum-tooltip__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.spectrum-tooltip__title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+.spectrum-tooltip__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.spectrum-tooltip__metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.spectrum-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.spectrum-metric__label {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.spectrum-metric__value {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* Guide/Legend */
+.spectrum-guide {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+.spectrum-guide__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot--blue { background: #3b82f6; box-shadow: 0 0 8px rgba(59,130,246,0.5); }
+.dot--purple { background: #a855f7; box-shadow: 0 0 8px rgba(168,85,247,0.5); }
+.dot--red { background: #ef4444; box-shadow: 0 0 8px rgba(239,68,68,0.5); }
