@@ -144,6 +144,18 @@
   color: var(--color-text-muted);
 }
 
+/* Hot Questions in dropdown */
+.search-dropdown-question {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+
+.search-dropdown-question-text {
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
+}
+
 /* Sidebar */
 .sidebar-overlay {
   position: fixed;

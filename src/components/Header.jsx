@@ -15,18 +15,35 @@ function Header() {
   const searchRef = useRef(null);
   const navigate = useNavigate();
 
-  // Filter results based on query
-  const filteredTopics = searchQuery.length > 0 
-    ? topics.filter(t => t.name.toLowerCase().includes(searchQuery.toLowerCase()))
+  // Normalize query for matching
+  const normalizedQuery = searchQuery.toLowerCase().trim();
+  
+  // Filter topics - match by name OR description OR questions
+  const filteredTopics = normalizedQuery.length > 0 
+    ? topics.filter(t => 
+        t.name.toLowerCase().includes(normalizedQuery) ||
+        t.description.toLowerCase().includes(normalizedQuery) ||
+        t.questionsForSpectrum?.some(q => q.question.toLowerCase().includes(normalizedQuery))
+      )
     : [];
-  const filteredUsers = searchQuery.length > 0
-    ? users.filter(u => u.displayName.toLowerCase().includes(searchQuery.toLowerCase()) || u.username.toLowerCase().includes(searchQuery.toLowerCase()))
+  
+  // Extract matching questions from all topics
+  const filteredQuestions = normalizedQuery.length > 0
+    ? topics.flatMap(t => 
+        (t.questionsForSpectrum || [])
+          .filter(q => q.question.toLowerCase().includes(normalizedQuery))
+          .map(q => ({ ...q, topic: t }))
+      ).slice(0, 3)
     : [];
-  const filteredGroups = searchQuery.length > 0
-    ? groups.filter(g => g.name.toLowerCase().includes(searchQuery.toLowerCase()))
+  
+  const filteredUsers = normalizedQuery.length > 0
+    ? users.filter(u => u.displayName.toLowerCase().includes(normalizedQuery) || u.username.toLowerCase().includes(normalizedQuery))
+    : [];
+  const filteredGroups = normalizedQuery.length > 0
+    ? groups.filter(g => g.name.toLowerCase().includes(normalizedQuery))
     : [];
 
-  const hasResults = filteredTopics.length > 0 || filteredUsers.length > 0 || filteredGroups.length > 0;
+  const hasResults = filteredTopics.length > 0 || filteredUsers.length > 0 || filteredGroups.length > 0 || filteredQuestions.length > 0;
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -108,6 +125,23 @@ function Header() {
                         onClick={handleResultClick}
                       >
                         <span className="search-dropdown-tag">#{topic.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+
+                {filteredQuestions.length > 0 && (
+                  <div className="search-dropdown-section">
+                    <span className="search-dropdown-label">🔥 Hot Questions</span>
+                    {filteredQuestions.map(q => (
+                      <Link 
+                        key={`${q.topic.id}-${q.id}`} 
+                        to={`/topic/${q.topic.slug}?q=${encodeURIComponent(q.question)}`} 
+                        className="search-dropdown-item search-dropdown-question"
+                        onClick={handleResultClick}
+                      >
+                        <span className="search-dropdown-question-text">{q.question}</span>
+                        <span className="search-dropdown-meta">#{q.topic.name}</span>
                       </Link>
                     ))}
                   </div>
